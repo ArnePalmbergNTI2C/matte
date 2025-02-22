@@ -33,11 +33,16 @@ def decrypt()
   puts "Skriv in den hemliga meddelandet"
   y = gets.chomp.to_i
   x = (y**@d) % @n
+  return "Det dekrypterade meddelandet är: #{x}"
+end
 
+def hackerman()
+  puts prime_factorizing()
+  puts find_d()
+  puts decrypt()
 end
 
 
 
-puts prime_factorizing()
+puts hackerman()
 
-puts find_d()

@@ -1,5 +1,12 @@
 require 'prime'
 
+def random_prime(min, max)
+    primes = (min..max).select do |n|
+      Prime.prime?(n)
+    end
+    primes.sample
+  end
+
 def public_key()
 
     n = n()
@@ -17,12 +24,8 @@ def n()
 
     system("cls")
     puts "bestäm primtal 1"
-    prime_number_1 = gets.chomp.to_i
-
-    #prime?
-    puts "Bestäm primtal 2"
-    prime_number_2 = gets.chomp.to_i
-    #prime
+    prime_number_1 = random_prime(1000, 9999)
+    prime_number_2 = random_prime(1000, 9990)
     n = prime_number_1*prime_number_2
     arr = [prime_number_1, prime_number_2, n]
     system("cls")
