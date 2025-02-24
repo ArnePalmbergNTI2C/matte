@@ -24,8 +24,8 @@ def n()
 
     system("cls")
     puts "bestäm primtal 1"
-    prime_number_1 = random_prime(1000, 9999)
-    prime_number_2 = random_prime(1000, 9990)
+    prime_number_1 = random_prime(100, 999)
+    prime_number_2 = random_prime(100, 999)
     n = prime_number_1*prime_number_2
     arr = [prime_number_1, prime_number_2, n]
     system("cls")
